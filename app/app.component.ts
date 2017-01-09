@@ -20,7 +20,7 @@ import { StarComponent }  from './component/star.component';
              <div class="btnsay"  (click)="msgBlocktoggle()" >&nbsp;</div>
              <div id="inputMsgBlock" class="inputMsgBlock animate-show" [hidden]="!showMsg">
                  <a class="btnclose" (click)="msgBlocktoggle()" >x</a>
-                 <input id="inputName" class="gray" type="text" placeholder="路人甲" />
+                 <input id="inputName" class="gray" type="text" placeholder="路人甲asdasd" />
                  <input id="inputMsg"   class="gray" type="text"  placeholder="中秋節快樂!" />
                  <input type="button"  id="submit" value="submit"  />
              </div>
