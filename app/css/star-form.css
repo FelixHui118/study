@@ -1,0 +1,94 @@
+input {
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif
+}
+
+.gray {
+    color: #666;
+    font-size: 11px
+}
+.msgblock {
+    cursor: pointer;
+    margin: auto;
+    position: relative;
+    width: 85px;
+    height: 89px;
+    top: -100px
+}
+.btnsay {
+    cursor: pointer;
+    width: 85px;
+    height: 89px;
+    background: url("../app/images/say.png") no-repeat center center
+}
+.inputMsgBlock {
+    height: 45px;
+    width: 376px;
+    position: absolute;
+    bottom: -45px;
+    left: -100px;
+    border: 2px solid #ccc;
+    background-color: #f0f0f0;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ddd));
+    background-image: -o-linear-gradient(#fff, #ddd);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+    background-image: -webkit-linear-gradient(#fff, #ddd);
+    background-image: linear-gradient(#fff, #ddd);
+    border-radius: 5px;
+    z-index: 101
+}
+.inputMsgBlock input {
+    float: left;
+    font-size: 12px;
+    padding: 7px 5px;
+    line-height: 25px;
+    border: 0;
+    outline: 0
+}
+.animate-show {
+    opacity: 1
+}
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+    -webkit-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s
+}
+.animate-show.ng-hide {
+    opacity: 0
+}
+#inputName {
+    width: 70px;
+    margin: 2px 5px;
+    border: 1px solid #ddd
+}
+#inputMsg {
+    width: 200px;
+    margin: 2px 5px 0 0;
+    border: 1px solid #ddd
+}
+#submit {
+    background-color: #3C8DDE;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#599bdc), to(#3072b3));
+    background-image: -webkit-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
+    border: 1px solid #D4D4D4;
+    border-color: #3072B3 #3072B3 #2A65A0;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    padding:12px 5px;
+}
+#submit:hover {
+    border-color: #2A65A0
+}
+.btnclose {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    font-family: sans-serif
+}

@@ -16,30 +16,15 @@ import { StarComponent }  from './component/star.component';
          </div>
          <div id="ftCity2" class="ftCity2"></div>
          <div id="ftCity1" class="ftCity1"></div>
-         <div class="msgblock">
-             <div class="btnsay"  (click)="msgBlocktoggle()" >&nbsp;</div>
-             <div id="inputMsgBlock" class="inputMsgBlock animate-show" [hidden]="!showMsg">
-                 <a class="btnclose" (click)="msgBlocktoggle()" >x</a>
-                 <input id="inputName" class="gray" type="text" placeholder="路人甲asdasd" />
-                 <input id="inputMsg"   class="gray" type="text"  placeholder="中秋節快樂!" />
-                 <input type="button"  id="submit" value="submit"  />
-             </div>
-         </div>
+          <star-form [stars]="stars"></star-form>
+
      </div>
   `,
-  styleUrls: ['app/css/star.css'],
+  styleUrls: ['app/css/app.css'],
    providers: [StarComponent]
 })
 
 export class AppComponent  {
-    showMsg = false
-//    constructor(private sc: StarComponent) {}
-
-    msgBlocktoggle():void{
-        this.showMsg = !this.showMsg
-        //this.newStar('felix','fefefe');
-    }
-
 
   RandomNum(): number {
      return Math.floor(Math.random() * (90 - 15 + 1)) + 15;
@@ -53,10 +38,5 @@ export class AppComponent  {
       new Star('Windstorm4' , 'hello', this.RandomNum(), this.RandomNum())
   ]
 
-  newStar( name:string,  message:string): void{
-      this.stars.push(
-          new Star(name , message, this.RandomNum(), this.RandomNum())
-      )
-      console.warn(this.stars);
-  }
+  
 }

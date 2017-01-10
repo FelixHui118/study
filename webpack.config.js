@@ -1,19 +1,18 @@
-/**
- * @author: @AngularClass
- */
+var css = require("!raw-loader!sass-loader!./file.scss");
+// returns compiled css code from file.scss, resolves Sass imports
+var css = require("!css-loader!sass-loader!./file.scss");
+// returns compiled css code from file.scss, resolves Sass and CSS imports and url(...)s
 
-// Look in ./config folder for webpack.dev.js
-switch (process.env.NODE_ENV) {
-  case 'prod':
-  case 'production':
-    module.exports = require('./config/webpack.prod')({env: 'production'});
-    break;
-  case 'test':
-  case 'testing':
-    module.exports = require('./config/webpack.test')({env: 'test'});
-    break;
-  case 'dev':
-  case 'development':
-  default:
-    module.exports = require('./config/webpack.dev')({env: 'development'});
-}
+module.exports = {
+  ...
+  module: {
+    loaders: [
+      {
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"]
+      }
+    ]
+  }
+};
+
+console.log('you are in webpack config');
